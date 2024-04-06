@@ -1,0 +1,49 @@
+export "PS1=$ "
+#here i am creating 
+$ mkdir -p hello/{five/six/seven,one/two/three/four}
+mkdir -p hello/{five/six/seven,one/two/three/four}
+
+export "PS1=$ "
+
+$ touch hello/five/six/c.txt hello/five/six/seven/error.log hello/one/a.txt hello/one/b.txt hello/one/two/d.txt hello/one/two/three/e.txt hello/one/two/three/four/access.log
+touch hello/five/six/c.txt hello/five/six/seven/error.log hello/one/a.txt hello/o
+one/b.txt hello/one/two/d.txt hello/one/two/three/e.txt hello/one/two/three/four/
+/access.log
+
+export "PS1=$ "
+# and then i am delete all files with the .log extension
+$ find hello -type f -name "*.log" -delete
+export "PS1=$ "
+find hello -type f -name "*.log" -delete
+
+export "PS1=$ "
+# and than i add content to a.txt:
+$ echo "Unix is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix, development starting in the 1970s at the Bell Labs research center by Ken Thompson, Dennis Ritchie, and others" > hello/one/a.txt
+
+echo "Unix is a family of multitasking, multiuser computer operating systems that
+t derive from the original AT&T Unix, development starting in the 1970s at the Be
+ell Labs research center by Ken Thompson, Dennis Ritchie, and others" > hello/one
+e/a.txt
+
+export "PS1=$ "
+#Delete the directory named "five"
+$ rm -r hello/five
+
+rm -r hello/five
+
+export "PS1=$ "
+export "PS1=$ "
+$ 
+#and than rename the "one" directory to "uno":
+mv hello/one hello/uno
+export "PS1=$ "
+
+# and finally i move a.txt to the "two" directory:
+$ mv hello/uno/a.txt hello/uno/two/
+
+mv hello/uno/a.txt hello/uno/two/
+
+mv: cannot stat 'hello/uno/a.txt': No such file or directory
+export "PS1=$ "
+
+$ 
